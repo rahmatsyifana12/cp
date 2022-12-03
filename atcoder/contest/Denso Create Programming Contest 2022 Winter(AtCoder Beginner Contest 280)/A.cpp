@@ -4,9 +4,8 @@ using namespace std;
 #define ll long long
 #define ld long double
 #define sza(x) ((int)x.size())
-#define all(a) (a).begin(), (a).end()
 #define sortv(a) sort(a.begin(), a.end())
-#define dbarr(x, n) for(int i=0; i<n; i++) cout << x[i] << ' '; cout << '\n';
+#define db_arr(x, n) for(int i=0; i<n; i++) cout << x[i] << ' '; cout << '\n';
 
 const int MAX_N = (int)1e5 + 5;
 const ll MOD = 1e9 + 7;
@@ -14,7 +13,19 @@ const ll INF = 1e9;
 const ld EPS = 1e-9;
 
 void solve() {
+    int h, w;
+    cin >> h >> w;
 
+    int ans = 0;
+    for (int i=0; i<h; i++) {
+        for (int j=0; j<w; j++) {
+            char s;
+            cin >> s;
+            if (s == '#') ans++;
+        }
+    }
+
+    cout << ans << '\n';
 }
 
 int main() {

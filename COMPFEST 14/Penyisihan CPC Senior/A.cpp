@@ -3,19 +3,26 @@ using namespace std;
 
 #define ll long long
 #define ld long double
+#define sza(x) ((int)x.size())
+#define all(a) (a).begin(), (a).end()
+#define sortv(a) sort(a.begin(), a.end())
+#define dbarr(x, n) for(int i=0; i<n; i++) cout << x[i] << ' '; cout << '\n';
 
+const int MAX_N = (int)1e5 + 5;
 const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
+const ld EPS = 1e-9;
 
 void solve() {
     ll n, m;
     cin >> n >> m;
 
     if (m == 1) {
-        cout << n - 1 << '\n';
+        cout << n-1 << '\n';
         return;
     }
 
-    cout << n * (m - 1) << '\n';
+    cout << (m-1)*n << '\n';
 }
 
 int main() {
@@ -23,7 +30,7 @@ int main() {
     cin.tie(0); cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    for (int t = 1; t <= tc; t++) {
+    for (int t=1; t<=tc; t++) {
         // cout << "Case #" << t << ": ";
         solve();
     }

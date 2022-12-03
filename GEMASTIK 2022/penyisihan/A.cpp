@@ -14,7 +14,20 @@ const ll INF = 1e9;
 const ld EPS = 1e-9;
 
 void solve() {
+    int a, b, c, d;
+    cin >> a >> b >> c >> d;
 
+    double x = (double)a/b;
+    double y = (double)c/d;
+    if (x == y) {
+        cout << "sama\n";
+    }
+    if (x > y) {
+        cout << "lebih besar\n";
+    }
+    if (x < y) {
+        cout << "lebih kecil\n";
+    }
 }
 
 int main() {

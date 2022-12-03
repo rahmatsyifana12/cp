@@ -14,7 +14,26 @@ const ll INF = 1e9;
 const ld EPS = 1e-9;
 
 void solve() {
+    int n;
+    cin >> n;
 
+    string a, b;
+    cin >> a;
+    cin >> b;
+
+    bool s = false;
+    int ans = 0;
+    for (int i=0; i<n; i++) {
+        if (a[i] > b[i] && s == false) {
+            s = true;
+            ans++;
+        }
+        if (a[i] < b[i]) {
+            s = false;
+        }
+    }
+
+    cout << ans << '\n';
 }
 
 int main() {
