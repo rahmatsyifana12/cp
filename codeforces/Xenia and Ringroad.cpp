@@ -3,10 +3,10 @@ using namespace std;
 
 #define ll long long
 #define ld long double
-#define pb push_back
 #define sza(x) ((int)x.size())
+#define all(a) (a).begin(), (a).end()
 #define sortv(a) sort(a.begin(), a.end())
-#define dbarr(x, m, n) for(int i=m; i<n; i++) cout << x[i] << ' '; cout << '\n';
+#define dbarr(x, n) for(int i=0; i<n; i++) cout << x[i] << ' '; cout << '\n';
 
 const int MAX_N = (int)1e5 + 5;
 const ll MOD = 1e9 + 7;
@@ -14,7 +14,28 @@ const ll INF = 1e9;
 const ld EPS = 1e-9;
 
 void solve() {
-    
+    int n, m;
+    cin >> n >> m;
+
+    int a[m+1];
+    for (int i=0; i<m; i++) {
+        cin >> a[i];
+    }
+
+    ll ans = 0;
+    int from = 1, to;
+    for (int i=0; i<m; i++) {
+        to = a[i];
+        if (to > from) {
+            ans += to-from;
+        }
+        if (to < from) {
+            ans += n-from+to;
+        }
+        from = to;
+    }
+
+    cout << ans << '\n';
 }
 
 int main() {

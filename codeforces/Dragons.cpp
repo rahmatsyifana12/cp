@@ -14,7 +14,27 @@ const ll INF = 1e9;
 const ld EPS = 1e-9;
 
 void solve() {
-    
+    ll s, n;
+    cin >> s >> n;
+
+    vector<pair<ll,ll>> v;
+    ll a, b;
+    for (int i=0; i<n; i++) {
+        cin >> a >> b;
+        v.pb(make_pair(a, b));
+    }
+
+    sortv(v);
+
+    for (int i=0; i<n; i++) {
+        if (s <= v[i].first) {
+            cout << "NO\n";
+            return;
+        }
+        s += v[i].second;
+    }
+
+    cout << "YES\n";
 }
 
 int main() {
